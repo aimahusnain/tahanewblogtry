@@ -178,22 +178,23 @@ export default function Create(){
   onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [control.id]: event.  target.value
+      [control.id]: event.target.value
     });
   }}
   value={formData[control.id as keyof BlogFormData]}
   name={control.id}
   className="w-full mb-8 rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
 >
-  <option value={''} id="">
+  <option key={''} value={''} id="">
     Select
   </option>
   {control.options.map((optionItem) => (
-    <option id={optionItem.value} value={optionItem.value}>
+    <option key={optionItem.value} id={optionItem.value} value={optionItem.value}>
       {optionItem.label}
     </option>
   ))}
 </select>
+
  : null
                     }
                   </div>
