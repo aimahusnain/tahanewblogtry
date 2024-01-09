@@ -137,7 +137,7 @@ export default function Create(){
                
               <div className="-mx-4 flex flex-wrap">
                 {formControls.map((control) => (
-                  <div className="w-full px-4" key={control.label}>
+                  <div key={control.label} className="w-full px-4">
                     <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
                       {control.label}
                     </label>
@@ -178,7 +178,7 @@ export default function Create(){
   onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [control.id]: event.target.value
+      [control.id]: event.  target.value
     });
   }}
   value={formData[control.id as keyof BlogFormData]}
