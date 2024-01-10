@@ -11,7 +11,6 @@ export async function GET(request: NextRequest) {
         category: extractCategoryID || "",
       },
     });
-
     if (getBlogPostListBasedOnCurrentCategoryID) {
       return NextResponse.json({
         success: true,
